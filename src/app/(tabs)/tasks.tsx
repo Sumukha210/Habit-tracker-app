@@ -8,7 +8,7 @@ const Tasks: React.FC = () => {
 
   return (
     <ScreenWrapper scroll>
-      <View className="p-4">
+      <View>
         <Text className={`text-3xl mb-4 ${isDarkMode ? 'text-text-primary-dark' : 'text-text-primary'}`}>Hello Tasks</Text>
         <Text className={`${isDarkMode ? 'text-text-secondary-dark' : 'text-text-secondary'}`}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta neque nesciunt omnis repudiandae mollitia inventore optio officia praesentium natus quibusdam

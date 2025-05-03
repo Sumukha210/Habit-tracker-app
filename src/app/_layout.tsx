@@ -1,5 +1,5 @@
 import { ThemeProvider, useTheme } from '@/src/theme/ThemeProvider';
-import palette from '@/src/theme/palette';
+import { palette } from '@/src/theme/palette';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';

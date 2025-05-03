@@ -1,16 +1,13 @@
 import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
-import { useTheme } from '@/src/theme/ThemeProvider';
 import React from 'react';
 import { Text, View } from 'react-native';
 
 const Journal: React.FC = () => {
-  const { isDarkMode } = useTheme();
-
   return (
     <ScreenWrapper scroll>
-      <View className="p-4">
-        <Text className={`text-3xl mb-4 ${isDarkMode ? 'text-text-primary-dark' : 'text-text-primary'}`}>Hello Journal</Text>
-        <Text className={`${isDarkMode ? 'text-text-secondary-dark' : 'text-text-secondary'}`}>
+      <View>
+        <Text>Hello Journal</Text>
+        <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dicta neque nesciunt omnis repudiandae mollitia inventore optio officia praesentium natus quibusdam
           voluptatem, rerum, libero ducimus. Natus maxime magni facere impedit repellat consequuntur? Est, porro iure! Quo culpa, quidem consectetur reprehenderit beatae fuga
           totam! Consequatur magni repellat qui nisi fugiat quaerat, quos ut? Cumque, nihil illum. Assumenda eos eveniet aspernatur facere soluta animi voluptatibus omnis beatae
