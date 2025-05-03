@@ -1,9 +1,9 @@
-import { ScreenWrapper } from '@/src/shared/components/ScreenWrapper';
 import { useTheme } from '@/src/theme/ThemeProvider';
 import { Ionicons } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
 
 const Settings = () => {
   const { isDarkMode } = useTheme();

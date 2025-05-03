@@ -1,5 +1,5 @@
+import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
 import { useTheme } from '@/src/theme/ThemeProvider';
-import { ScreenWrapper } from '@/src/shared/components/ScreenWrapper';
 import React from 'react';
 import { Text, View } from 'react-native';
 

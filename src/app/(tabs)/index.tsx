@@ -1,7 +1,7 @@
 import { useTheme } from '@/src/theme/ThemeProvider';
 import { useRouter } from 'expo-router';
 import { Text, TouchableOpacity, View } from 'react-native';
-import { ScreenWrapper } from '@/src/shared/components/ScreenWrapper';
+import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
 
 export default function Index() {
   const { isDarkMode, accentColor } = useTheme();

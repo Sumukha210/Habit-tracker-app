@@ -1,7 +1,7 @@
+import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
 import { useTheme } from '@/src/theme/ThemeProvider';
 import React from 'react';
 import { Text, View } from 'react-native';
-import { ScreenWrapper } from '@/src/shared/components/ScreenWrapper';
 
 const Tasks: React.FC = () => {
   const { isDarkMode } = useTheme();
