@@ -1,3 +1,3 @@
-import Appearance from "@/src/components/screens/Settings/Theme";
+import Appearance from '@/src/components/screens/Settings/Theme';
 
 export default Appearance;

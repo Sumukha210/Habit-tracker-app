@@ -1,3 +1,4 @@
+import { ScreenWrapper } from "@/src/components/ScreenWrapper";
 import { useTheme } from "@/src/theme/ThemeProvider";
 import { AccentColor, ThemeMode } from "@store/theme";
 import { Stack } from "expo-router";
@@ -27,11 +28,7 @@ const Appearance = () => {
     ];
 
   return (
-    <View
-      className={`flex-1 ${
-        isDarkMode ? "bg-background-dark" : "bg-background"
-      }`}
-    >
+    <ScreenWrapper>
       <Stack.Screen options={{ title: "Appearance" }} />
 
       <ScrollView className="flex-1 p-4">
@@ -116,7 +113,7 @@ const Appearance = () => {
           ))}
         </View>
       </ScrollView>
-    </View>
+    </ScreenWrapper>
   );
 };
 
