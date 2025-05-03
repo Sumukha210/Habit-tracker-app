@@ -5,7 +5,6 @@ import { tabs } from '@/src/utils/tabs';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import { Text, View } from 'react-native';
-
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function TabLayout() {

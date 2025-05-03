@@ -1,4 +1,4 @@
-import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
+import ScreenWrapper from '@/src/components/shared/ScreenWrapper';
 import React from 'react';
 import { Text, View } from 'react-native';
 

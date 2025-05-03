@@ -3,16 +3,13 @@ import { palette } from '@/src/theme/palette';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import './globals.css';
 
 export default function RootLayout() {
   return (
-    <SafeAreaProvider>
-      <ThemeProvider>
-        <AppLayout />
-      </ThemeProvider>
-    </SafeAreaProvider>
+    <ThemeProvider>
+      <AppLayout />
+    </ThemeProvider>
   );
 }
 

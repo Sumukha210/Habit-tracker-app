@@ -1,9 +1,9 @@
 import { useTheme } from '@/src/theme/ThemeProvider';
-import { AccentColor, ThemeMode } from '@store/theme';
+import { AccentColor, ThemeMode } from '@/store/theme';
 import { Stack } from 'expo-router';
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import { ScreenWrapper } from '@/src/components/shared/ScreenWrapper';
+import ScreenWrapper from '@/src/components/shared/ScreenWrapper';
 
 const Appearance = () => {
   const { isDarkMode, currentTheme, accentColor, changeTheme, changeAccentColor } = useTheme();

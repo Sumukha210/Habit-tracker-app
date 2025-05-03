@@ -3,5 +3,7 @@
   "editor.formatOnSave": true,
   "window.zoomLevel": -1,
   "explorer.compactFolders": false,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
 }

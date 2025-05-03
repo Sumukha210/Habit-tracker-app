@@ -21,15 +21,15 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@app/*": ["./src/app/*"],
-      "@components/*": ["./src/components/*"],
-      "@store/*": ["./src/store/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@assets/*": ["./assets/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@shared/*": ["./src/components/shared/*"]
+      "@/app/*": ["./src/app/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/store/*": ["./src/store/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/assets/*": ["./assets/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/shared/*": ["./src/components/shared/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "nativewind-env.d.ts"],
-  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "docs", "assets", "android", "ios", ".vscode", ".expo", "dist"]
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "docs", "assets", "android", "ios", ".vscode", "dist"]
 }
