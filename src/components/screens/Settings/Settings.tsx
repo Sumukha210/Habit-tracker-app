@@ -9,7 +9,7 @@ const Settings = () => {
   const router = useRouter();
 
   const navigateToThemeSettings = () => {
-    router.navigate("./settings/theme");
+    router.navigate("./settings/appearance");
   };
 
   return (
