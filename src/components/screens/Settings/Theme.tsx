@@ -4,7 +4,7 @@ import { Stack } from "expo-router";
 import React from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
-const ThemeScreen = () => {
+const Appearance = () => {
   const {
     isDarkMode,
     currentTheme,
@@ -120,4 +120,4 @@ const ThemeScreen = () => {
   );
 };
 
-export default ThemeScreen;
+export default Appearance;
