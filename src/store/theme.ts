@@ -3,7 +3,7 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 export type ThemeMode = "light" | "dark" | "system";
-export type AccentColor = "blue" | "lightBlue" | "yellow";
+export type AccentColor = "blue" | "skyblue" | "yellow";
 
 interface ThemeState {
   themeMode: ThemeMode;
@@ -16,7 +16,7 @@ export const useThemeStore = create<ThemeState>()(
   persist(
     (set) => ({
       themeMode: "system",
-      accentColor: "lightBlue",
+      accentColor: "skyblue",
       setThemeMode: (mode: ThemeMode) => set({ themeMode: mode }),
       setAccentColor: (color: AccentColor) => set({ accentColor: color }),
     }),

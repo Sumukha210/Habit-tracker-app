@@ -22,7 +22,7 @@ const Appearance = () => {
   const accentOptions: { label: string; value: AccentColor; color: string }[] =
     [
       { label: "Blue", value: "blue", color: "bg-blue" },
-      { label: "Light Blue", value: "lightBlue", color: "bg-light-blue" },
+      { label: "Light Blue", value: "skyblue", color: "bg-light-blue" },
       { label: "Yellow", value: "yellow", color: "bg-yellow" },
     ];
 
@@ -64,7 +64,7 @@ const Appearance = () => {
                   className={`w-4 h-4 rounded-full ${
                     accentColor === "blue"
                       ? "bg-blue"
-                      : accentColor === "lightBlue"
+                      : accentColor === "skyblue"
                       ? "bg-light-blue"
                       : "bg-yellow"
                   }`}
@@ -105,7 +105,7 @@ const Appearance = () => {
                     className={`w-4 h-4 rounded-full ml-2 ${
                       accentColor === "blue"
                         ? "bg-blue"
-                        : accentColor === "lightBlue"
+                        : accentColor === "skyblue"
                         ? "bg-light-blue"
                         : "bg-yellow"
                     }`}
