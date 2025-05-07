@@ -18,17 +18,12 @@ const TabLayout = () => {
             borderTopLeftRadius: 40,
             borderTopRightRadius: 40,
             paddingBottom: insets.bottom,
-            height: 65 + insets.bottom,
+            height: 70 + insets.bottom,
             overflow: 'hidden',
-            position: 'absolute',
-            bottom: 0,
-            left: 0,
-            right: 0,
-            width: '100%',
             display: 'flex',
-            paddingTop: 20,
+            paddingTop: 22,
           },
-          tabBarShowLabel: false, // Hide default label
+          tabBarShowLabel: false,
         }}
       >
         {tabs.map((tab) => (

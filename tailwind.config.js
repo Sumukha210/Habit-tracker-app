@@ -20,6 +20,7 @@ module.exports = {
         },
         accent: {
           primary: palette.accent.primary,
+          secondary: palette.accent.secondary,
           light: palette.accent.light,
           shadow: palette.accent.shadow,
         },

@@ -11,6 +11,7 @@ export const palette = {
   },
   accent: {
     primary: '#139a5d',
+    secondary: 'rgba(38,202,95,0.9)',
     light: 'rgba(239, 68, 68, 0.1)',
     shadow: '#6d6b6b80',
   },

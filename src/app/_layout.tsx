@@ -17,6 +17,7 @@ export default function AppLayout() {
           headerShown: false,
           contentStyle: {
             backgroundColor: 'transparent',
+            // backgroundColor: 'red',
           },
         }}
       />

@@ -1,12 +1,3 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-
-const Tasks = () => {
-  return (
-    <View>
-      <Text>Tasks</Text>
-    </View>
-  );
-};
+import Tasks from '@/src/components/screens/Tasks';
 
 export default Tasks;
