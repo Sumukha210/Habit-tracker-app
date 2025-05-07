@@ -1,29 +1,16 @@
-import { ThemeProvider, useTheme } from '@/src/theme/ThemeProvider';
-import { palette } from '@/src/theme/palette';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { View } from 'react-native';
 import './globals.css';
 
-export default function RootLayout() {
-  return (
-    <ThemeProvider>
-      <AppLayout />
-    </ThemeProvider>
-  );
-}
-
-function AppLayout() {
-  const { isDarkMode } = useTheme();
-
+export default function AppLayout() {
   return (
     <View
       style={{
         flex: 1,
-        backgroundColor: isDarkMode ? palette.backgroundDark : palette.background,
       }}
     >
-      <StatusBar style={isDarkMode ? 'light' : 'dark'} translucent={true} backgroundColor="transparent" />
+      <StatusBar translucent={true} backgroundColor="transparent" />
       <Stack
         screenOptions={{
           headerShown: false,
