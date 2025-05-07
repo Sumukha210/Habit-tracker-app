@@ -23,4 +23,5 @@ export const palette = {
     success: '#10B981',
     pending: '#6B7280',
   },
+  boxShadow: `0px 0px 10px #6d6b6b80`,
 };

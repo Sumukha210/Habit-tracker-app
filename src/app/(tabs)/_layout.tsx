@@ -46,7 +46,7 @@ const tabScreenOptions = (tab: ITabs) => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        boxShadow: focused ? `0px 0px 10px ${palette.accent.shadow}` : 'none',
+        boxShadow: focused ? palette.boxShadow : 'none',
       }}
     >
       <FontAwesome name={tab.icon} size={size} color={focused ? palette.accent.primary : palette.text.secondary} />
