@@ -16,7 +16,7 @@ interface ScreenWrapperProps {
  * A wrapper component for screens that applies consistent safe area insets
  * and theme-based background colors
  */
-export const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children, scroll = false, style, contentContainerStyle, className }) => {
+const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children, scroll = false, style, contentContainerStyle, className }) => {
   const { isDarkMode } = useTheme();
   const insets = useSafeAreaInsets();
   const backgroundColor = isDarkMode ? palette.backgroundDark : palette.background;
@@ -44,3 +44,5 @@ export const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children, scroll =
     </View>
   );
 };
+
+export default ScreenWrapper;

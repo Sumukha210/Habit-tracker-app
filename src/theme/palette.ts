@@ -67,3 +67,6 @@ export const accentColors = {
     bgTab: '#FFFBEA',
   },
 };
+
+// Accent colors keys type
+export type AccentColorVariantType = keyof (typeof accentColors)[keyof typeof accentColors];

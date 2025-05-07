@@ -1,7 +1,7 @@
-import { accentColors } from "@/src/theme/palette";
-import { AccentColor, ThemeMode, useThemeStore } from "@store/theme";
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { useColorScheme } from "react-native";
+import { accentColors } from '@/src/theme/palette';
+import { AccentColor, ThemeMode, useThemeStore } from '@/store/theme';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { useColorScheme } from 'react-native';
 
 interface ThemeContextType {
   isDarkMode: boolean;
@@ -14,20 +14,17 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const systemColorScheme = useColorScheme();
-  const { themeMode, accentColor, setThemeMode, setAccentColor } =
-    useThemeStore();
+  const { themeMode, accentColor, setThemeMode, setAccentColor } = useThemeStore();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     // Determine if we should use dark mode based on the theme setting
-    if (themeMode === "system") {
-      setIsDarkMode(systemColorScheme === "dark");
+    if (themeMode === 'system') {
+      setIsDarkMode(systemColorScheme === 'dark');
     } else {
-      setIsDarkMode(themeMode === "dark");
+      setIsDarkMode(themeMode === 'dark');
     }
   }, [themeMode, systemColorScheme]);
 
@@ -51,15 +48,13 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
     accentPalette,
   };
 
-  return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 };
 
 export const useTheme = (): ThemeContextType => {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
 };

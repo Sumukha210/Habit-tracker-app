@@ -30,7 +30,7 @@ If you are using a mobile device to test the app, ensure that both your computer
    To ensure your mobile device can connect to the development server:
 
    ```bash
-   setx REACT_NATIVE_PACKAGER_HOSTNAME 192.168.1.100
+   setx REACT_NATIVE_PACKAGER_HOSTNAME "localhost"
    ```
 
    > **Note:** Replace `192.168.1.100` with your computer's actual IP address. Restart your terminal after running this command.
