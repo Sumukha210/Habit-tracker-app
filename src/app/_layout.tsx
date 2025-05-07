@@ -9,6 +9,7 @@ export default function AppLayout() {
       style={{
         flex: 1,
       }}
+      className="bg-background-primary"
     >
       <StatusBar translucent={true} backgroundColor="transparent" />
       <Stack
