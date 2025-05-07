@@ -1,14 +1,14 @@
-import ScreenWrapper from '@/src/components/shared/ScreenWrapper';
+import LayoutWrapper from '@/src/components/shared/LayoutWrapper';
 import React from 'react';
 import { View, Text } from 'react-native';
 
 const Index = () => {
   return (
-    <View className="flex-1 bg-background-primary">
-      <ScreenWrapper>
+    <LayoutWrapper title="Habits" onAddIconPress={() => console.log('Habits icon pressed')}>
+      <View>
         <Text className="text-red-400">Index</Text>
-      </ScreenWrapper>
-    </View>
+      </View>
+    </LayoutWrapper>
   );
 };
 

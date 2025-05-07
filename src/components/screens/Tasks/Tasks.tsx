@@ -1,9 +1,7 @@
 import LayoutWrapper from '@/src/components/shared/LayoutWrapper';
 import React from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import { palette } from '@/src/theme/palette';
 
 const taskList = [
   'Task 1',
@@ -32,21 +30,15 @@ const Tasks = () => {
   const router = useRouter();
 
   const hanldleAddTask = () => {
-    router.push({ pathname: '/taskView', params: { mode: 'add' } });
+    router.push({ pathname: '/taskDetails', params: { mode: 'add' } });
   };
 
   return (
-    <LayoutWrapper>
-      <View className="absolute bottom-4 right-2 p-4 z-40">
-        <TouchableOpacity className="h-20 w-20 flex items-center justify-center bg-accent-secondary rounded-full" style={{ boxShadow: palette.boxShadow }} onPress={hanldleAddTask}>
-          <Ionicons name="add" size={40} color="white" />
-        </TouchableOpacity>
-      </View>
-
+    <LayoutWrapper title="Tasks" onAddIconPress={hanldleAddTask}>
       <ScrollView>
         <View className="flex-1 items-center justify-center gap-2">
           {taskList.map((task, index) => (
-            <View key={index} className="bg-background-secondary py-6 px-4 rounded-lg mb-2 w-full" style={{ boxShadow: `0 0 2px ${palette.accent.shadow}` }}>
+            <View key={index} className="bg-background-secondary py-6 px-4 rounded-lg mb-2 w-full">
               <Text className="text-text-primary text-xl font-semibold">{task}</Text>
             </View>
           ))}
