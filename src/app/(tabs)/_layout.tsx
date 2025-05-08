@@ -9,7 +9,7 @@ const TabLayout = () => {
   const insets = useSafeAreaInsets();
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: palette.background.primary }}>
       <Tabs
         screenOptions={{
           headerShown: false,
@@ -22,7 +22,11 @@ const TabLayout = () => {
             overflow: 'hidden',
             display: 'flex',
             paddingTop: 22,
+            borderTopWidth: 0, // Remove the default border
+            elevation: 0, // Remove shadow on Android
+            shadowOpacity: 0, // Remove shadow on iOS
           },
+          tabBarBackground: () => <View style={{ flex: 1, backgroundColor: palette.background.secondary }} />,
           tabBarShowLabel: false,
         }}
       >

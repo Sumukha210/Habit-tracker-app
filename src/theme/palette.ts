@@ -1,27 +1,27 @@
 export const palette = {
   background: {
-    primary: '#141516',
-    secondary: '#222529',
-    tertiary: '#080808',
+    primary: '#18161a', // slate-black
+    secondary: '#232027', // muted dark for surfaces
+    tertiary: '#0e0c10', // modal/deep sections
   },
   text: {
-    primary: '#dad6d6',
-    secondary: '#AAAAAA',
-    disabled: '#666666',
+    primary: '#f5eaea', // soft pinkish-white
+    secondary: '#c9baba', // gentle dusty rose
+    disabled: '#8c7d7d', // soft desaturated rose
   },
   accent: {
-    primary: '#139a5d',
-    secondary: 'rgba(38,202,95,0.9)',
-    light: 'rgba(239, 68, 68, 0.1)',
-    shadow: '#6d6b6b80',
+    primary: '#ec4899', // rose pink (buttons, active elements)
+    secondary: '#f9a8d4', // pale pink (hover, highlights)
+    light: 'rgba(236, 72, 153, 0.12)', // soft background accent
+    shadow: '#7c3a6180', // subtle warm pink glow
   },
   border: {
-    light: '#333333',
-    accent: '#EF4444',
+    light: '#3a343a', // slate border
+    accent: '#f9a8d4', // border highlight
   },
   status: {
-    success: '#10B981',
-    pending: '#6B7280',
+    success: '#facc15', // golden yellow (for a classy contrast)
+    pending: '#a78bfa', // lavender for neutral/pending state
   },
-  boxShadow: `0px 0px 10px #6d6b6b80`,
+  boxShadow: `0px 0px 10px #7c3a6180`,
 };
