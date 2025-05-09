@@ -9,14 +9,17 @@ const TabLayout = () => {
   const insets = useSafeAreaInsets();
 
   return (
-    <View style={{ flex: 1, backgroundColor: palette.background.primary }}>
+    <View style={{ flex: 1, backgroundColor: 'transparent' }}>
       <Tabs
         screenOptions={{
           headerShown: false,
+          headerStyle: {
+            backgroundColor: 'orange',
+          },
           tabBarStyle: {
             backgroundColor: palette.background.secondary,
-            borderTopLeftRadius: 40,
-            borderTopRightRadius: 40,
+            borderTopLeftRadius: 50,
+            borderTopRightRadius: 50,
             paddingBottom: insets.bottom,
             height: 70 + insets.bottom,
             overflow: 'hidden',

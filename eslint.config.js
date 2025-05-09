@@ -61,15 +61,27 @@ module.exports = defineConfig([
     rules: {
       'no-unused-vars': 'off',
       'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'error',
+        {
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+        },
+      ],
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
           vars: 'all',
-          args: 'after-used',
-          ignoreRestSiblings: true,
+          varsIgnorePattern: '^_',
+          args: 'all',
           argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          destructuredArrayIgnorePattern: '^_',
+          ignoreRestSiblings: false,
         },
       ],
     },

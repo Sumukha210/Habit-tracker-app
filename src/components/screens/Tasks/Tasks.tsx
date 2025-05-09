@@ -1,6 +1,6 @@
 import LayoutWrapper from '@/src/components/shared/LayoutWrapper';
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 const taskList = [
@@ -35,15 +35,37 @@ const Tasks = () => {
 
   return (
     <LayoutWrapper title="Tasks" onAddIconPress={hanldleAddTask}>
-      <ScrollView>
-        <View className="flex-1 items-center justify-center gap-2">
-          {taskList.map((task, index) => (
-            <View key={index} className="bg-background-secondary py-6 px-4 rounded-lg mb-2 w-full">
-              <Text className="text-text-primary text-xl font-semibold">{task}</Text>
+      <View className="flex-1">
+        <FlatList
+          className="h-full"
+          data={taskList}
+          keyExtractor={(_, index) => index.toString()}
+          renderItem={({ item }) => (
+            <View className="bg-background-secondary py-6 px-4 rounded-lg mb-2 w-full">
+              <Text className="text-text-primary text-xl font-semibold">{item}</Text>
             </View>
-          ))}
-        </View>
-      </ScrollView>
+          )}
+          contentContainerStyle={{ padding: 16 }}
+          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
+          ListEmptyComponent={() => (
+            <View className="flex-1 items-center justify-center gap-2">
+              <Text className="text-text-primary text-xl font-semibold">No tasks available</Text>
+            </View>
+          )}
+          // ListHeaderComponent={() => (
+          //   <View className="flex-1 items-center justify-center gap-2 ">
+          //     <Text className="text-text-primary text-xl font-semibold">Tasks</Text>
+          //   </View>
+          // )}
+          // ListFooterComponent={() => (
+          //   <View className="flex-1 items-center justify-center gap-2 mb-4">
+          //     <Text className="text-text-primary text-xl font-semibold">End of tasks</Text>
+          //   </View>
+          // )}
+          ItemSeparatorComponent={() => <View className="h-2" />}
+        />
+      </View>
     </LayoutWrapper>
   );
 };
