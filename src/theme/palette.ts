@@ -23,5 +23,5 @@ export const palette = {
     success: '#26DE81', // vibrant emerald
     pending: '#FD9644', // warm amber
   },
-  boxShadow: `0px 0px 15px rgba(56, 217, 169, 0.4), 0px 0px 30px rgba(253, 203, 110, 0.2)`,
+  boxShadow: `0px 0px 30px rgba(56, 217, 169, 0.4), 0px 0px 30px rgba(253, 203, 110, 0.2)`,
 };

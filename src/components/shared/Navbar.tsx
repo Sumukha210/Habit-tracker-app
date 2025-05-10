@@ -3,6 +3,7 @@ import { Feather } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
 
 interface NavbarProps {
   title?: string;
@@ -27,9 +28,20 @@ const Navbar: React.FC<NavbarProps> = ({ title, onAddIconPress, leftBtnType, han
 
       <View>
         {onAddIconPress ? (
-          <TouchableOpacity onPress={onAddIconPress}>
-            <Feather name="plus" size={32} color="white" />
-          </TouchableOpacity>
+          <LinearGradient
+            colors={[palette.accent.light, palette.accent.secondary]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={{
+              borderRadius: 50,
+              padding: 8,
+            }}
+            className="bg-accent-primary"
+          >
+            <TouchableOpacity onPress={onAddIconPress}>
+              <Feather name="plus" size={32} color="white" />
+            </TouchableOpacity>
+          </LinearGradient>
         ) : null}
       </View>
     </View>
