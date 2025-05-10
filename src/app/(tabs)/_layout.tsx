@@ -4,6 +4,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const TabLayout = () => {
   const insets = useSafeAreaInsets();
@@ -40,16 +41,28 @@ const TabLayout = () => {
 
 const tabScreenOptions = (tab: ITabs) => ({
   title: tab.title,
-  tabBarIcon: ({ focused, size }: { color: string; size: number; focused: boolean }) => (
+  tabBarIcon: ({ focused }: { color: string; focused: boolean }) => (
     <View
       style={{
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',
-        boxShadow: focused ? palette.boxShadow : 'none',
+        paddingTop: 10,
       }}
     >
-      <FontAwesome name={tab.icon} size={size} color={focused ? palette.accent.primary : palette.accent.shadow} />
+      <LinearGradient
+        colors={focused ? [palette.accent.light, palette.accent.primary] : ['transparent', 'transparent', 'transparent']}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={{
+          borderRadius: 50,
+          padding: 8,
+          backgroundColor: focused ? '' : 'transparent',
+        }}
+        className="h-14 w-14 items-center justify-center bg-accent-primary"
+      >
+        <FontAwesome name={tab.icon} size={focused ? 20 : 26} color={focused ? palette.text.primary : palette.accent.shadow} />
+      </LinearGradient>
     </View>
   ),
   tabBarItemStyle: {

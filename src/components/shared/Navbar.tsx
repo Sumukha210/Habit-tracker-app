@@ -29,7 +29,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, onAddIconPress, leftBtnType, han
       <View>
         {onAddIconPress ? (
           <LinearGradient
-            colors={[palette.accent.light, palette.accent.secondary]}
+            colors={[palette.accent.light, palette.accent.secondary, palette.accent.primary]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             style={{
@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, onAddIconPress, leftBtnType, han
             className="bg-accent-primary"
           >
             <TouchableOpacity onPress={onAddIconPress}>
-              <Feather name="plus" size={32} color="white" />
+              <Feather name="plus" size={32} color={palette.text.primary} />
             </TouchableOpacity>
           </LinearGradient>
         ) : null}
