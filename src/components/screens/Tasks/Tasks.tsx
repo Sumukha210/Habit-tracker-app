@@ -44,12 +44,7 @@ const Tasks = () => {
         keyExtractor={(_, index) => index.toString()}
         renderItem={({ item }) => (
           <View className="bg-background-secondary relative rounded-lg overflow-hidden border border-border-light">
-            <LinearGradient
-              colors={[palette.border.accent, 'transparent']}
-              start={{ x: 1, y: 0 }}
-              end={{ x: 0, y: 1 }}
-              className="bg-accent-primary absolute right-0 h-full w-[6px] opacity-70"
-            />
+            <LinearGradient colors={[palette.accent.primary, palette.accent.secondary]} className="bg-accent-primary absolute right-0 h-full w-[6px] opacity-70" />
 
             <View className="p-5 w-full flex-row items-center gap-4">
               <View className="h-12 w-12 items-center justify-center rounded-full border border-border-light">
