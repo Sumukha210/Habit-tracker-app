@@ -4,7 +4,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
+import { twMerge } from 'tailwind-merge';
 
 const TabLayout = () => {
   const insets = useSafeAreaInsets();
@@ -20,12 +20,12 @@ const TabLayout = () => {
           tabBarStyle: {
             backgroundColor: palette.background.secondary,
             paddingBottom: insets.bottom + 10,
-            paddingTop: 10,
-            height: 50 + insets.bottom,
+            paddingTop: 13,
+
+            height: 60 + insets.bottom,
             overflow: 'hidden',
             borderTopWidth: 0,
             elevation: 0,
-            shadowOpacity: 0,
           },
           tabBarBackground: () => <View style={{ flex: 1, backgroundColor: palette.background.secondary }} />,
           tabBarShowLabel: false,
@@ -50,19 +50,9 @@ const tabScreenOptions = (tab: ITabs) => ({
         paddingTop: 10,
       }}
     >
-      <LinearGradient
-        colors={focused ? [palette.accent.light, palette.accent.primary] : ['transparent', 'transparent', 'transparent']}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
-        style={{
-          borderRadius: 50,
-          padding: 8,
-          backgroundColor: focused ? '' : 'transparent',
-        }}
-        className="h-14 w-14 items-center justify-center bg-accent-primary"
-      >
-        <FontAwesome name={tab.icon} size={focused ? 20 : 26} color={focused ? palette.text.primary : palette.accent.shadow} />
-      </LinearGradient>
+      <View className={twMerge('h-14 w-14 items-center justify-center rounded-full border', focused ? 'border-border-accent' : 'border-border-light')}>
+        <FontAwesome name={tab.icon} size={20} color={focused ? palette.text.primary : palette.accent.shadow} />
+      </View>
     </View>
   ),
   tabBarItemStyle: {

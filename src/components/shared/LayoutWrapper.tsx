@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ViewStyle } from 'react-native';
+import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { twMerge } from 'tailwind-merge';
 import { useRouter } from 'expo-router';
@@ -18,12 +18,12 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children, className, view
   const insets = useSafeAreaInsets();
   const router = useRouter();
 
-  const containerStyle: ViewStyle = {
-    flex: 1,
-    paddingBottom: insets.bottom,
-    paddingLeft: insets.left + 20,
-    paddingRight: insets.right + 20,
-  };
+  // const containerStyle: ViewStyle = {
+  //   flex: 1,
+  //   paddingBottom: insets.bottom,
+  //   paddingLeft: insets.left + 20,
+  //   paddingRight: insets.right + 20,
+  // };
 
   const handleLeftBtnPress = () => {
     if (leftBtnType === 'back') {
@@ -41,7 +41,13 @@ const LayoutWrapper: React.FC<LayoutWrapperProps> = ({ children, className, view
     <View className={twMerge('bg-background-primary flex-1', className)}>
       <Navbar title={title} onAddIconPress={onAddIconPress} leftBtnType={leftBtnType} handleLeftBtnPress={handleLeftBtnPress} />
 
-      <View style={[containerStyle]} className={twMerge('pt-4', viewClassName)}>
+      <View
+        className={twMerge('pt-4', viewClassName)}
+        style={{
+          paddingLeft: insets.left + 20,
+          paddingRight: insets.right + 20,
+        }}
+      >
         {children}
       </View>
     </View>
