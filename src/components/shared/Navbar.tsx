@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, onAddIconPress, leftBtnType, han
           </TouchableOpacity>
         ) : null}
 
-        {title ? <Text className="text-3xl text-text-primary font-semibold">{title}</Text> : null}
+        {title ? <Text className="text-3xl text-accent-primary font-semibold">{title}</Text> : null}
       </View>
 
       <View>
