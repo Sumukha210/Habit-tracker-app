@@ -37,7 +37,7 @@ const Tasks = () => {
     <LayoutWrapper title="Tasks" onAddIconPress={hanldleAddTask}>
       <View className="flex-1">
         <FlatList
-          className="h-full"
+          className="h-full "
           data={taskList}
           keyExtractor={(_, index) => index.toString()}
           renderItem={({ item }) => (
@@ -53,16 +53,6 @@ const Tasks = () => {
               <Text className="text-text-primary text-xl font-semibold">No tasks available</Text>
             </View>
           )}
-          // ListHeaderComponent={() => (
-          //   <View className="flex-1 items-center justify-center gap-2 ">
-          //     <Text className="text-text-primary text-xl font-semibold">Tasks</Text>
-          //   </View>
-          // )}
-          // ListFooterComponent={() => (
-          //   <View className="flex-1 items-center justify-center gap-2 mb-4">
-          //     <Text className="text-text-primary text-xl font-semibold">End of tasks</Text>
-          //   </View>
-          // )}
           ItemSeparatorComponent={() => <View className="h-2" />}
         />
       </View>
