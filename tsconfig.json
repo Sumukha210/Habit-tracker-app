@@ -25,6 +25,7 @@
       "@/components/*": ["./src/components/*"],
       "@/store/*": ["./src/store/*"],
       "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"],
       "@/assets/*": ["./assets/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/shared/*": ["./src/components/shared/*"]

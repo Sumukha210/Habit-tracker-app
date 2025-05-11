@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, onAddIconPress, leftBtnType, han
 
       <View>
         {onAddIconPress ? (
-          <View className="h-[42px] w-[42px] items-center justify-center border-2 border-border-accent rounded-full">
+          <View className="h-[42px] w-[42px] items-center justify-center border-2 border-border-light rounded-full">
             <TouchableOpacity onPress={onAddIconPress}>
               <Feather name="plus" size={26} color={palette.text.primary} />
             </TouchableOpacity>
